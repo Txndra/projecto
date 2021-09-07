@@ -1,6 +1,6 @@
 # projecto
 nea 2021
-STarted mid august
+STarted early august
 #06/09/21 [check when done]
 -find how to acess api
 -rapid api
