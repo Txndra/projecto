@@ -10,4 +10,5 @@ STarted early august
 -OPTIONAL: add sales forecast use training and testing data to train
 -clean code up more commenting needed
 -converse with MA for advice
-
+-USE CLASS FOR RETILERS BIGG BRAIN IDEA
+SLAP oop errywherer
