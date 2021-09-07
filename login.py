@@ -10,12 +10,12 @@ def delete3():
 def delete4():
   screen5.destroy()
   
-def login_sucess():
+def login_success():
   global screen3
   screen3 = Toplevel(screen)
   screen3.title("Success")
   screen3.geometry("150x100")
-  Label(screen3, text = "Login Sucess").pack()
+  Label(screen3, text = "Login Success").pack()
   Button(screen3, text = "OK", command =delete2).pack()
 
 def password_not_recognised():
@@ -49,7 +49,7 @@ def register_user():
   username_entry.delete(0, END)
   password_entry.delete(0, END)
 
-  Label(screen1, text = "Registration Sucess", fg = "green" ,font = ("calibri", 11)).pack()
+  Label(screen1, text = "Registration Success", fg = "green" ,font = ("calibri", 11)).pack()
 
 def login_verify():
   
@@ -63,7 +63,7 @@ def login_verify():
     file1 = open(username1, "r")
     verify = file1.read().splitlines()
     if password1 in verify:
-        login_sucess()
+        login_success()
     else:
         password_not_recognised()
 
@@ -129,8 +129,8 @@ def main_screen():
   global screen
   screen = Tk()
   screen.geometry("300x250")
-  screen.title("Notes 1.0")
-  Label(text = "Notes 1.0", bg = "grey", width = "300", height = "2", font = ("Calibri", 13)).pack()
+  screen.title("Secant Marketing Program")
+  Label(text = "Hi there!", bg = "grey", width = "300", height = "2", font = ("Calibri", 13)).pack()
   Label(text = "").pack()
   Button(text = "Login", height = "2", width = "30", command = login).pack()
   Label(text = "").pack()
