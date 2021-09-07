@@ -12,3 +12,7 @@ STarted early august
 -converse with MA for advice
 -USE CLASS FOR RETILERS BIGG BRAIN IDEA
 SLAP oop errywherer
+-try 2 companies
+-try price match/sales forecast match differnt sites
+-show on graph
+--
