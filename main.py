@@ -6,7 +6,6 @@ import pandas as pd
 import matplotlib as plt
 import os
 import requests
-import time
 #df = pd.read_csv("database")
 
 #Login screen
@@ -25,7 +24,7 @@ def CloseAll():
 
 def login_success():
   global screen3
-  screen3 = Toplevel(screen)
+  screen3 = Toplevel(screen) 
   screen3.title("Success")
   screen3.geometry("150x100")
   Label(screen3, text = "Login Success").pack()
@@ -197,32 +196,34 @@ def menu():
 
   
   start.mainloop()
-
+# clear box
 def ClearBox():
   searchbox.delete(0, END)
-  
+#feedback to user about what is going on
 def send():
   search = searchbox.get()
   Label(start, text=f'sending request for,{search}, on {option}').grid(row=3,column=1)
   Label(start, text=f'{search}, Inputted').grid(row=4,column=1)
- 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MAIN PARTTTT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #connection to amazon api live feed
-def query2amazon():
-  global word
-  url = "https://amazon-product-reviews-keywords.p.rapidapi.com/product/search"
+class Retailer(self,option,word):
+  
+  def query2amazon():
+    global word
+    url = "https://amazon-product-reviews-keywords.p.rapidapi.com/product/search"
 
-  querystring = {"keyword":word,"country":"GB","category":"aps"}
+    querystring = {"keyword":"Iphone","country":"GB","category":"aps"}
 
-  headers = {
-      'x-rapidapi-host': "amazon-product-reviews-keywords.p.rapidapi.com",
-      'x-rapidapi-key': "3d86ca03bamsh2cfb5ea5f839101p185cdejsna0a123169efb"
-      }
+    headers = {
+        'x-rapidapi-host': "amazon-product-reviews-keywords.p.rapidapi.com",
+        'x-rapidapi-key': "3d86ca03bamsh2cfb5ea5f839101p185cdejsna0a123169efb"
+        }
 
-  response = requests.request("GET", url, headers=headers, params=querystring)
+    response = requests.request("GET", url, headers=headers, params=querystring)
 
-  print(response.text)
+    print(response.text)
 #adding user input so they can type what they want
 #def search(word):
-  
+
 
 main_screen()
