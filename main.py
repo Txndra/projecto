@@ -206,13 +206,14 @@ def send():
   Label(start, text=f'{search}, Inputted').grid(row=4,column=1)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MAIN PARTTTT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #connection to amazon api live feed
-class Retailer(self,option,word):
-  
-  def query2amazon():
+class Retailer(option,search):
+  search = str(search)
+  option = str(option)
+  def query2amazon(self):
     global word
     url = "https://amazon-product-reviews-keywords.p.rapidapi.com/product/search"
 
-    querystring = {"keyword":"Iphone","country":"GB","category":"aps"}
+    querystring = {"keyword":search,"country":"GB","category":"aps"}
 
     headers = {
         'x-rapidapi-host': "amazon-product-reviews-keywords.p.rapidapi.com",
